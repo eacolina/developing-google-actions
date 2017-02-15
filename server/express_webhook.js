@@ -19,9 +19,20 @@
     function runMethod(assistant){
       var id = assistant.getArgument('method_ID');
       Meteor.call('random.insert', id);
-      assistant.tell("A user has been added to the database");
+      assistant.tell("Ok method ", id, "is now running!");
     }
 
+
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function Navigate(assistant){
+      var view = capitalizeFirstLetter(assistant.getArgument('view'));
+
+      NavData.insert({ name: view, createdAt: new Date() } );
+      assistant.tell("Ok method ", id, "is now running!");
+    }
 
     actionMap.set('input.welcome',welcomeIntent);
     actionMap.set('runMethod_intent', runMethod);
