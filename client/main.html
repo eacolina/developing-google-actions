@@ -1,0 +1,42 @@
+<head>
+    <title>myAPP</title>
+</head>
+
+<body>
+</body>
+
+<template name="main">
+  <h1>myAPP + Amazon Alexa Integration</h1>
+  <p>Click this button to run a random method. You can also ask Alexa to do run a method for you!<br><br>
+    You can do it by saying one of the following statements:</p>
+    <ul>
+      <li>alexa, ask myApp to run method number <span class="highlight">any number</span>.</li>
+      <li>alexa, ask myApp to take me to "detail 1".</li>
+      <li>alexa, ask myApp to take me to "detail 2".</li>
+    </ul>
+  <button>Run Method</button>
+  <h2>List of Executed Methods</h2>
+  <ul>
+    {{#each randomData}}
+    <li>{{name}} - {{formatDate createdAt}}</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="detail1">
+  <h1>Detail 1</h1>
+  <p>Cool, right! Now try this:</p>
+    <ul>
+      <li>alexa, ask myApp to take me to "detail 2".</li>
+      <li>alexa, ask myApp to take me to "home page".</li>
+    </ul>
+</template>
+
+<template name="detail2">
+  <h1>Detail 2</h1>
+  <p>Cool, right! Now try this:</p>
+    <ul>
+      <li>alexa, ask myApp to take me to "detail 1".</li>
+      <li>alexa, ask myApp to take me to "home page".</li>
+    </ul>
+</template>
