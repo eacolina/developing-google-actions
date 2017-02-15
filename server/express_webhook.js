@@ -1,5 +1,6 @@
 
   import { Meteor } from 'meteor/meteor';
+  import { NavData } from '../imports/api';
 
   app = Express(); // create Express server
   const APIAiAssistant = require('actions-on-google').ApiAiAssistant; // create api assitant object to  process API AI requests
