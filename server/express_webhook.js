@@ -16,13 +16,14 @@
       assistant.tell("Welcome and go away");
     }
 
-    function addUser(assistant){
-      var id = Math.floor(1000 + Math.random() * 9000);
+    function runMethod(assistant){
+      var id = assistant.getArgument('method_ID');
       Meteor.call('random.insert', id);
       assistant.tell("A user has been added to the database");
     }
 
 
     actionMap.set('input.welcome',welcomeIntent);
+    actionMap.set('runMethod_intent', runMethod);
     assistant.handleRequest(actionMap);
   })
