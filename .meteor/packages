@@ -25,3 +25,4 @@ meteortoys:allthings
 
 npm-bcrypt                    # Need this for restivus to work.
 nimble:restivus               # REST API server
+glittershark:meteor-express
