@@ -13,13 +13,13 @@ var moment = require('moment');
 Template.main.onCreated(function mainOnCreated() {
     this.autorun(function() {
         if (NavData.find({
-                name: 'Detail 1'
+                name: 'detail 1'
             }).count() > 0) {
             Router.go('/detail1');
             Meteor.call('removeNavDocs');
         }
         if (NavData.find({
-                name: 'Detail 2'
+                name: 'detail 2'
             }).count() > 0) {
             Router.go('/detail2');
             Meteor.call('removeNavDocs');
@@ -30,13 +30,13 @@ Template.main.onCreated(function mainOnCreated() {
 Template.detail1.onCreated(function mainOnCreated() {
     this.autorun(function() {
         if (NavData.find({
-                name: 'Home'
+                name: 'home'
             }).count() > 0) {
             Router.go('/');
             Meteor.call('removeNavDocs');
         }
         if (NavData.find({
-                name: 'Detail 2'
+                name: 'detail 2'
             }).count() > 0) {
             Router.go('/detail2');
             Meteor.call('removeNavDocs');
@@ -53,7 +53,7 @@ Template.detail2.onCreated(function mainOnCreated() {
             Meteor.call('removeNavDocs');
         }
         if (NavData.find({
-                name: 'Detail 1'
+                name: 'detail 1'
             }).count() > 0) {
             Router.go('/detail1');
             Meteor.call('removeNavDocs');

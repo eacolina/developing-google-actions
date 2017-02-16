@@ -19,7 +19,13 @@
     function runMethod(assistant){
       var id = assistant.getArgument('method_ID');
       Meteor.call('random.insert', id);
-      assistant.tell("A user has been added to the database");
+      assistant.tell("Ok, method", method_ID, "is now running");
+    }
+
+    function changeView(assistant){
+      var view = assistant.getArgument("view");
+      NavData.insert({ name: view, createdAt: new Date() });
+      assistant.tell("You can now see ", view, " in your device." )
     }
 
 
