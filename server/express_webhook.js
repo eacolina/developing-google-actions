@@ -26,7 +26,7 @@
 
     function Navigate(assistant){
       var view = assistant.getArgument('view');
-      Meteor.call(insertView, view);
+      Meteor.call('insertView', view);
       assistant.tell("Ok you can now see " + view + " on your device");
     }
 
