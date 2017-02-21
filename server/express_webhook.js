@@ -23,18 +23,15 @@
     }
 
 
-    function capitalizeFirstLetter(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
     function Navigate(assistant){
-      var view = capitalizeFirstLetter(assistant.getArgument('view'));
+      var view = assistant.getArgument('view');
 
       NavData.insert({ name: view, createdAt: new Date() } );
-      assistant.tell("Ok method " + id + "is now running!");
+      assistant.tell("Ok you can now see " + view + " on your device");
     }
 
     actionMap.set('input.welcome',welcomeIntent);
     actionMap.set('runMethod_intent', runMethod);
+    actionMap.set('goToView_intent', Navigate)
     assistant.handleRequest(actionMap);
   })
