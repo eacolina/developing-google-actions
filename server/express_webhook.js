@@ -17,8 +17,16 @@
 
     function runMethod(assistant){ // function to run a method when the  'runMethod_intent is called'
       var id = assistant.getArgument('method_ID'); // use .getArgument('parameterName') to get the value of a paramter
-      Meteor.call('random.insert', id); // insert a method into the database
-      assistant.tell("Ok method " + id + " is now running!"); //  using .tell to talk to the user and finish this conversation
+      if (id != null){
+
+        Meteor.call('random.insert', id); // insert a method into the database
+        assistant.tell("Ok method " + id + " is now running!"); //  using .tell to talk to the user and finish this conversation
+
+      } else {
+
+        assistant.tell("There was an error with your request.");
+
+      }
     }
 
 
