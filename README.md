@@ -6,7 +6,7 @@
 We can think of Actions as Google's response to  Alexa. Both work using a very similar logic flow, a voice enabled device processes voice input from the user, sends this parsed information in a JSON to a web service, this web service executes the developers logics and it sends back a JSON response.
 
 ## Table of Contents
-- [Differences between Actions on Google and Alexa Skills ](#how-alexa-works)
+- [Differences between Actions on Google and Alexa Skills](#how-actions-on-google-works)
 - [Creating a Google Action](#creating-a-google-action)
   - [Step 1: Configuration on the Google Developer Console](#step-1-action-information)
   - [Step 2: Creating the Interaction Model using API.ai](#step-2-creating-the-interaction-model-using-api-ai)
@@ -25,14 +25,14 @@ We can think of Actions as Google's response to  Alexa. Both work using a very s
 - [Resources](#resources)
 - [Authors](#authors)
 
-## How do Actions on Google work
+## How Actions on Google works
 In order to develop an Alexa Skill we should first understand how it works by looking at the following use-case:
 ![](https://developers.google.com/actions/images/conversation-action.png)
 
 To do that or to control an app, the system architecture is expected to look like this:
 ![](https://perkinelmer.box.com/shared/static/psnchr8fvqu5njil35yognio1okzkw43.png)
 
-As said before the process is almost identical of the one followed by Alexa so we are not going to get into much detail.
+As said before the process is almost identical of the one followed by Alexa, so we are not going to get into much detail.
 
 ## Creating a Google Action
 There are 6 parts to creating Alexa skills.
