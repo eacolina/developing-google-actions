@@ -11,7 +11,7 @@
   app.post('/ga-webhook',function(req, res){
     const assistant = new APIAiAssistant({request:req,response:res});
     const actionMap = new Map();
-    console.log(req)
+    console.log(req.body)
 
     function welcomeIntent(assistant){
       assistant.tell("Welcome and go away");
@@ -26,6 +26,8 @@
 
     function Navigate(assistant){
       var view = assistant.getArgument('view');
+      console.log("I called navigate");
+      console.log("view is",view);
       Meteor.call('insertView', view);
       assistant.tell("Ok you can now see " + view + " on your device");
     }
