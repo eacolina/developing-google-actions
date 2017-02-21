@@ -47,7 +47,7 @@ Template.detail1.onCreated(function mainOnCreated() {
 Template.detail2.onCreated(function mainOnCreated() {
     this.autorun(function() {
         if (NavData.find({
-                name: 'Home'
+                name: 'home'
             }).count() > 0) {
             Router.go('/');
             Meteor.call('removeNavDocs');
