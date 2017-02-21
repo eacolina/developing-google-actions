@@ -38,7 +38,7 @@ As said before the process is almost identical of the one followed by Alexa so w
 There are 6 parts to creating Alexa skills.
 
 ## Step 1: Action Information
-Creating an Action for the first time might seem a little bit more tricky than creating an Alexa Skill as there are more //CHECk pieces involved, nevertheless once you do it one time it becomes straightforward.
+Creating an Action for the first time might seem a little bit more tricky than creating an Alexa Skill as there are more pieces involved, nevertheless once you do it one time it becomes straightforward.
 
 **NOTE:** You need a Google account to create an Action.
 
