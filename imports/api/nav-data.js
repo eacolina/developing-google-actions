@@ -22,4 +22,8 @@ Meteor.methods({
     'removeNavDocs' () {
         NavData.remove({});
     },
+
+    'insertView' (view) {
+      NavData.insert({ name: view, createdAt: new Date() });
+    }
 });

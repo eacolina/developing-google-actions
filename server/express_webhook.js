@@ -1,5 +1,6 @@
 
   import { Meteor } from 'meteor/meteor';
+  import { NavData } from '../imports/api/nav-data.js'
 
   app = Express(); // create Express server
   const APIAiAssistant = require('actions-on-google').ApiAiAssistant; // create api assitant object to  process API AI requests
@@ -19,14 +20,13 @@
     function runMethod(assistant){
       var id = assistant.getArgument('method_ID');
       Meteor.call('random.insert', id);
-      assistant.tell("Ok method " + id + "is now running!");
+      assistant.tell("Ok method " + id + " is now running!");
     }
 
 
     function Navigate(assistant){
       var view = assistant.getArgument('view');
-
-      NavData.insert({ name: view, createdAt: new Date() } );
+      Meteor.call(insertView, view);
       assistant.tell("Ok you can now see " + view + " on your device");
     }
 
