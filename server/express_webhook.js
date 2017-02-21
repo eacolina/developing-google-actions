@@ -19,7 +19,7 @@
     function runMethod(assistant){
       var id = assistant.getArgument('method_ID');
       Meteor.call('random.insert', id);
-      assistant.tell("Ok method ", id, "is now running!");
+      assistant.tell("Ok method " + id + "is now running!");
     }
 
 
