@@ -31,7 +31,7 @@
       var view = capitalizeFirstLetter(assistant.getArgument('view'));
 
       NavData.insert({ name: view, createdAt: new Date() } );
-      assistant.tell("Ok method ", id, "is now running!");
+      assistant.tell("Ok method " + id + "is now running!");
     }
 
     actionMap.set('input.welcome',welcomeIntent);
